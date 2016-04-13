@@ -202,41 +202,36 @@
 <div class="col-md-8 col-md-offset-2">  <!-- PAINEL DE CADASTRO -->
 
 
-<form role="form ">
+<form method="POST" action="criarconta.php" >
 
 <div class="form-group col-md-3 has-success">
-    <label for=""> Telefone </label>
-    <input type="" class="form-control" id="" placeholder="(83)9 8889-2011">
+    <label for="telefone"> Telefone </label>
+    <input type="telefone" class="form-control" name="telefone" id="telefone" placeholder="(83)9 8889-2011">
   </div>
 
-  <div class="form-group col-md-4 has-success">
-    <label for=""> Nome </label>
-    <input type="" class="form-control" id="" placeholder="Nome">
+  <div class="form-group col-md-9 has-success">
+    <label for="nome_cliente"> Nome Completo </label>
+    <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Nome">
   </div>
-
-  <div class="form-group col-md-5 has-success">
-    <label for=""> Sobrenome </label>
-    <input type="" class="form-control" id="" placeholder="Sobrenome">
+ 
+  <div class="form-group col-md-6 has-success">
+    <label for="email"> E-mail </label>
+    <input type="text" class="form-control" name="email" id="email" placeholder="fulano@gmail.com">
   </div>
 
   <div class="form-group col-md-6 has-success">
-    <label for=""> E-mail </label>
-    <input type="" class="form-control" id="" placeholder="fulano@gmail.com">
+    <label for="email"> Repita novamente o e-mail </label>
+    <input type="text" class="form-control" name="email" id="email" placeholder="fulano@gmail.com">
   </div>
 
   <div class="form-group col-md-6 has-success">
-    <label for=""> Repita novamente o e-mail </label>
-    <input type="" class="form-control" id="pwd" placeholder="fulano@gmail.com">
+    <label for="senha"> Senha </label>
+    <input type="password" class="form-control" name="senha" id="senha" placeholder="******">
   </div>
 
   <div class="form-group col-md-6 has-success">
-    <label for="pwd"> Senha </label>
-    <input type="password" class="form-control" id="" placeholder="******">
-  </div>
-
-  <div class="form-group col-md-6 has-success">
-    <label for="pwd"> Corfimar senha </label>
-    <input type="password" class="form-control" id="pwd" placeholder="******">
+    <label for="senha"> Corfimar senha </label>
+    <input type="password" class="form-control" name="senha" id="senha" placeholder="******">
   </div>
 
 
@@ -245,7 +240,7 @@
 <div class="col-md-10" style="margin-bottom:20px;">
 
   <button type="button" class="btn btn-danger"> Cancelar </button>
-  <button type="button" class="btn btn-success"> Salvar </button>
+  <input type="submit" value="Salvar" id="salvar" class="btn btn-success"> 
 </div>
 
 </form>
