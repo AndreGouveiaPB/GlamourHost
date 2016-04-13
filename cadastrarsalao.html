@@ -202,47 +202,53 @@
 <div class="col-md-8 col-md-offset-2">  <!-- PAINEL DE CADASTRO -->
 
 
-<form role="form">
+<form method="POST" action="cadastrarsalao.php" >
 
 <div class="form-group col-md-3 has-success">
-    <label for=""> CNPJ </label>
-    <input type="" class="form-control" id="" placeholder="__.__.___/____-__">
+    <label for="cnpj_cpf"> CNPJ </label>
+    <input type="text" class="form-control" name="cnpj_cpf" id="cnpj_cpf" placeholder="__.__.___/____-__">
   </div>
 
   <div class="form-group col-md-9 has-success">
-    <label for=""> Nome do Salão </label>
-    <input type="" class="form-control" id="" placeholder="">
+    <label for="nome_salao"> Nome do Salão </label>
+    <input type="text" class="form-control" name="nome_salao" id="nome_salao" placeholder="">
   </div>
 
 <div class="form-group col-md-4 has-success">
-    <label for=""> Endereço </label>
-    <input type="" class="form-control" id="" placeholder="">
+    <label for="endereco"> Endereço </label>
+    <input type="text" class="form-control" name="endereco" id="endereco" placeholder="">
   </div>
  
 
 <div class="form-group col-md-4 has-success">
-    <label for=""> Bairro </label>
-    <input type="" class="form-control" id="" placeholder="">
+    <label for="bairro"> Bairro </label>
+    <input type="text" class="form-control" name="bairro" id="bairro" placeholder="">
   </div>
 
   <div class="form-group col-md-4 has-success">
-    <label for=""> Cidade </label>
-    <input type="" class="form-control" id="" placeholder="">
+    <label for="cidade"> Cidade </label>
+    <input type="text" class="form-control" name="cidade" id="cidade" placeholder="">
   </div>
 
   <div class="form-group col-md-4 has-success">
-    <label for=""> CEP </label>
-    <input type="" class="form-control" id="" placeholder="">
+    <label for="cep"> CEP </label>
+    <input type="text" class="form-control" name="cep" id="cep" placeholder="">
   </div>
 
   <div class="form-group col-md-4 has-success">
-    <label for=""> UF </label>
-    <input type="" class="form-control" id="" placeholder="">
+    <label for="uf"> UF </label>
+    <input type="text" class="form-control" name="uf" id="uf" placeholder="">
   </div>
 
   <div class="form-group col-md-4 has-success">
-    <label for=""> E-mail </label>
-    <input type="" class="form-control" id="" placeholder="">
+    <label for="email_salao"> E-mail </label>
+    <input type="text" class="form-control" name="email_salao" id="email_salao" placeholder="">
+  </div>
+    
+  <div class="form-group col-md-7 col-md-offset-3 has-success">
+ 
+    <label for="senha_salao"> Senha </label>
+    <input type="password" class="form-control" name="senha_salao" id="senha_salao">
   </div>
 
 
@@ -254,7 +260,7 @@
 <div class="col-md-10" style="margin-bottom:20px;">
 
   <button type="button" class="btn btn-danger"> Cancelar </button>
-  <button type="button" class="btn btn-success"> Salvar </button>
+  <input type="submit" value="Salvar" id="salvar" class="btn btn-success"> 
 </div>
 
 </form>
@@ -291,7 +297,7 @@
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 <div class="col-md-12 footer" style="text-align:center;">
    <p> ©2016 - GlamourHost.
-   <p>Desenvolvido por Ravi Nunes 
+   <p>Desenvolvido por Equipe Glamour
   </div>
 
 </body>
