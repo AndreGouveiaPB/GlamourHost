@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Gerenciador-Login </title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+	<script type="js/jquery-2.2.2.js"></script>
+	<script type="js/bootsatrap.min.js"></script>
+
+	<style>
+	img {margin:0 auto;}
+	#muralFoto {min-height: 400px;}
+	</style>
+
+</head>
+<body>
+
+
+<div class="container">
+</br>
+
+<div class="panel panel-primary">
+<div class="panel-heading"> <h1 class="panel-title text-center"> <strong> GlamourHost</strong> </h1>
+</div>
+                       
+                       <div class="panel-body">
+                    <!-- div class="row"></div-->
+                       <div class="col-md-6">
+                             <div class="well">
+                             	<h2 class="text-center" id="muralFoto"> Foto do Salão </h2>
+                             </div>
+
+
+                       </div>
+                       <div class="col-md-6">
+
+                       <img src="img/logo.jpg" class="img img-responsive" width="125" />
+                       <br />
+                       
+
+
+                       
+                               <form action="gerenciadorLogin.php" method="post" name="formulario" id="formulario">
+
+
+                            <div class="form-group">
+                                
+                                <input type="text" class="form-control" name="email_salao" id="email_salao"  placeholder="Insira o Email" /> 
+                           <hr/>
+                          	<div class="form-group">
+                                    <input type="password" class="form-control" name="senha_salao" id="senha_salao"  placeholder="Insira a senha"/> 
+                          	</div>
+
+                          	<div class="form-inline">
+                          	<input type="text" name="captcha" class="form-group" placeholder="Insira o Código" />
+
+                            <img src="" style="padding:3px;border-radius:5px;" class="form-control bg-primary"/>
+                          	</div>
+
+
+
+                          	<hr/>
+                                <input type="submit" class="btn btn-success col-md-offset-0" value="Entrar" id="entrar" name="entrar" >
+
+                          	
+
+
+                          </form>
+
+
+                       </div>
+                       </div>
+                       </div>
+
+
+
+
+                       <div class="panel-footer"> 
+                           <p class="text-center">&copy;<a href="index.html"> GlamourHost </a> </p> 
+                       </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

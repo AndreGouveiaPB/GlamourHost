@@ -4,7 +4,7 @@ header("content-type: text/html; charset=utf-8");
 session_start();
 
 include("config.php");
-$nome_cliente = $_POST['nome_cliente'];
+
 $email = $_POST['email'];
 $entrar = $_POST['entrar'];
 $senha = $_POST['senha'];
@@ -189,7 +189,8 @@ if (isset($entrar)) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i>  Inicio </a>
+                      <a class="navbar-brand" href="gerenciadorLogin.html"> <i class="fa fa-lock" ></i>  Tenho Salão </a>
+
                 </div>
 
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -197,9 +198,7 @@ if (isset($entrar)) {
                         <li><a href="cadastrarsalao.html">  CADASTRAR SALÃO </a></li>
                         <li><a href="servicos.html"> SERVIÇOS  </a></li>
                         <li><a href="contato.html">  CONTATO </a></li>
-                        <li><a href="criarconta.html">  CRIAR CONTA </a></li>
-                        <li><a href="loginglamour.html">  <i class="fa fa-user"></i> 
-                        <li><a href="usuario.php">    <?php echo $nome_cliente ?> </a></li>
+                        <li><a href="usuario.php">  <i class="fa fa-user"></i>   <?php echo $email ?> </a></li>
                         <li><a href="logoff.php"> <i class="fa fa-sign-out"></i> Sair</a>
                                     </ul>
                                     </div>

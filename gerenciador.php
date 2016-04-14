@@ -3,8 +3,6 @@
 
 
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +43,8 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"> Usuário </a></li>
-        <li><a href="#">  <i class="fa fa-sign-out"></i> </a> </li>
+        <li><a href="logoff.php"> <i class="fa fa-sign-out"></i> Sair</a> </li>
+        
 
       </ul>
 
