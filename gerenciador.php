@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +30,7 @@
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav" id="menusuper">
 
-        <li class="active"><a href="#"> Funcionários <span class="sr-only">(current)</span></a> </li>
+          <li class="active"><a href="index.php"> Funcionários <span class="sr-only">(current)</span></a> </li>
 
         <li><a href=""> Agendamentos </a></li>
         <li><a href=""> Serviços </a></li>
