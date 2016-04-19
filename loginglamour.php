@@ -167,11 +167,13 @@
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-left">
         <li><a href="cadastrarsalao.html">  CADASTRAR SALÃO </a></li>
         <li><a href="servicos.html"> SERVIÇOS  </a></li>
         <li><a href="contato.html">  CONTATO </a></li>
         <li><a href="criarconta.html">  CRIAR CONTA </a></li>
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
         <li><a href="loginglamour.html">  <i class="fa fa-user"></i> Login </a></li>
       </ul>
     </div>
@@ -214,6 +216,9 @@
  
     <label for="senha"> Senha </label>
     <input type="password" class="form-control" id="senha" name="senha" size=16 maxlength=16 placeholder="********">
+    
+
+
 </div>
  
 
@@ -240,7 +245,7 @@
 
 <div class="col-md-12" style="margin-top:180px;">
 <div class="alert alert-dismissible alert-success">
- <strong> Ajuda ?! </strong> Entre em contato conosco <a href="#" class="alert-link"> glamourhost@gmail.com </a>.
+ <strong> Ajuda ?! </strong> Entre em contato conosco <a href="contato.html" class="alert-link"> glamourhost@gmail.com </a>.
 </div>
 </div>
 

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 header("content-type: text/html; charset=utf-8");
 
 session_start();
@@ -6,17 +6,21 @@ session_start();
 include("config.php");
 
 $email = $_POST['email'];
-$entrar = $_POST['entrar'];
-$senha = $_POST['senha'];
+@$entrar = $_POST['entrar'];
+@$senha = md5(mysql_real_escape_string(($_POST['senha'])));
 if (isset($entrar)) {
 
     $verifica = mysql_query ("SELECT * FROM cliente WHERE email ='$email' and senha='$senha'") or die("erro ao selecionar");
 
 
     if (mysql_num_rows($verifica) <= 0) {
-        echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='loginglamour.html';</script>";
+        echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='loginglamour.php';</script>";
         die();
     } else {
+       
+        $dados = mysql_fetch_array($verifica);
+        $_SESSION['usuarioid'] = $dados['idCliente'];
+        $_SESSION['usuarionome'] = $dados['nome_cliente'];
         setcookie("email", $email);
     }
 }
@@ -30,152 +34,16 @@ if (isset($entrar)) {
         <title> GlamourHost </title>
         <link rel="icon"  type="image/jpg" href="img\logo.jpg" />
 
-        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/jquery.js"></script>
 
 
         <style>
-            {
-                font: 400 15px Lato, sans-serif;
-                line-height: 1.8;
-                color: #818181;
-            }
-            h2 {
-                font-size: 24px;
-                text-transform: uppercase;
-                color: #303030;
-                font-weight: 600;
-                margin-bottom: 30px;
-
-            }
-            h4 {
-                font-size: 19px;
-                line-height: 1.375em;
-                color: #303030;
-                font-weight: 400;
-                margin-bottom: 30px;
-            }  
-            .jumbotron {
-                background-color: #66c2ff;
-                color: #fff;
-                padding: 100px 25px;
-                font-family: Montserrat, sans-serif;
-            }
-            .container-fluid {
-                padding: 60px 50px;
-            }
-            .bg-grey {
-                background-color: #f6f6f6;
-            }
-            .logo-small {
-                color: #f4511e;
-                font-size: 50px;
-            }
-            .logo {
-                color: #f4511e;
-                font-size: 200px;
-            }
-            .thumbnail {
-                padding: 0 0 15px 0;
-                border: none;
-                border-radius: 0;
-            }
-            .thumbnail img {
-                width: 100%;
-                height: 100%;
-                margin-bottom: 10px;
-            }
-
-            .item h4 {
-                font-size: 19px;
-                line-height: 1.375em;
-                font-weight: 400;
-                font-style: italic;
-                margin: 70px 0;
-            }
-            .item span {
-                font-style: normal;
-            }
-            .panel {
-                border: 1px solid #f4511e; 
-                border-radius:0 !important;
-                transition: box-shadow 0.5s;
-            }
-            .panel:hover {
-                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-            }
-            .panel-footer .btn:hover {
-                border: 1px solid #f4511e;
-                background-color: #fff !important;
-                color: #f4511e;
-            }
-            .panel-heading {
-                color: #fff !important;
-                background-color: #f4511e !important;
-                padding: 25px;
-                border-bottom: 1px solid transparent;
-                border-top-left-radius: 0px;
-                border-top-right-radius: 0px;
-                border-bottom-left-radius: 0px;
-                border-bottom-right-radius: 0px;
-            }
-            .panel-footer {
-                background-color: white !important;
-            }
-            .panel-footer h3 {
-                font-size: 32px;
-            }
-            .panel-footer h4 {
-                color: #aaa;
-                font-size: 14px;
-            }
-            .panel-footer .btn {
-                margin: 15px 0;
-                background-color: #f4511e;
-                color: #fff;
-            }
-            .navbar {
-                margin-bottom: 0;
-                background-color: #f4511e;
-                z-index: 9999;
-                border: 0;
-                font-size: 12px !important;
-                line-height: 1.42857143 !important;
-                letter-spacing: 4px;
-                border-radius: 0;
-                font-family: Montserrat, sans-serif;
-            }
-            .navbar li a, .navbar .navbar-brand {
-                color: #fff !important;
-            }
-            .navbar-nav li a:hover, .navbar-nav li.active a {
-                color: #f4511e !important;
-                background-color: #fff !important;
-            }
-            .navbar-default .navbar-toggle {
-                border-color: transparent;
-                color: #fff !important;
-            }
-            footer .glyphicon {
-                font-size: 20px;
-                margin-bottom: 20px;
-                color: #f4511e;
-            }
-
-
-            #face:hover {
-                color: blue;
-            }
-            #twitter:hover {
-                color:#4db8ff;
-            }
-            #insta:hover {
-                color:#994d00;
-            }
-
+           
         </style>
     </head>
 
@@ -189,18 +57,20 @@ if (isset($entrar)) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                      <a class="navbar-brand" href="gerenciadorLogin.html"> <i class="fa fa-lock" ></i>  Tenho Salão </a>
+                      
 
                 </div>
 
                 <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="cadastrarsalao.html">  CADASTRAR SALÃO </a></li>
+                    <ul class="nav navbar-nav navbar-left">
                         <li><a href="servicos.html"> SERVIÇOS  </a></li>
-                        <li><a href="contato.html">  CONTATO </a></li>
-                        <li><a href="usuario.php">  <i class="fa fa-user"></i>   <?php echo $email ?> </a></li>
+                        <li><a href="contato.php">  CONTATO </a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="usuario.php">  <i class="fa fa-user-md"></i>  <?=$_SESSION['usuarionome']?></a></li>
                         <li><a href="logoff.php"> <i class="fa fa-sign-out"></i> Sair</a>
-                                    </ul>
+                            </ul>
+                                    
                                     </div>
 
 
@@ -209,6 +79,7 @@ if (isset($entrar)) {
 
                                     <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
                                     <div class="jumbotron text-center">
+                                        
                                         <h1> GlamourHost </h1> 
                                         <p> Solicite seu agendamento ! </p> 
 

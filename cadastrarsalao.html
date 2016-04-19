@@ -1,347 +1,197 @@
 
 <!DOCTYPE html>
 <html>
-<head>
- 
-  <title> Cadastrar Salão </title>
-  <link rel="icon"  type="image/jpg" href="img\logo.jpg" />
-  <meta charset="utf-8">
+    <head>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-  <script src="js/jquery.js"> </script>
-  
-  <style>
+        <title> Cadastrar Salão </title>
+        <link rel="icon"  type="image/jpg" href="img\logo.jpg" />
+        <meta charset="utf-8">
 
-  body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-  }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-  }
-  h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }  
-  .jumbotron {
-      background-color: #f4511e;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/jquery.js"></script>
 
-.div-select select {
-   width:250px;  /* Tamanho final do select */
-   overflow:hidden;
-   background: transparent;
-   padding: 5px;
-   font-size: 16px;
-   line-height: 1;
-   border: 1px solid #228B22;
-   border-radius: 4px;
-   height: 40px;
-   
-   }
+    </head>
 
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .panel {
-      border: 1px solid #f4511e; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
-      background-color: #fff !important;
-      color: #f4511e;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #f4511e !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #f4511e;
-      color: #fff;
-  }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #f4511e;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i>  Inicio </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="cadastrarsalao.html">  CADASTRAR SALÃO </a></li>
+                        <li><a href="servicos.html"> SERVIÇOS  </a></li>
+                        <li><a href="contato.html">  CONTATO </a></li>
+                        <li><a href="criarconta.html">  CRIAR CONTA </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right"> 
+                        <li><a href="loginglamour.php">  <i class="fa fa-user"></i> Login </a></li>
+                    </ul>
+                </div>
 
 
-#face:hover {
-  color: blue;
-}
-#twitter:hover {
-  color:#4db8ff;
-}
-#insta:hover {
-  color:#994d00;
-}
+            </div>
+        </nav>
 
-  </style>
-</head>
-
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i>  Inicio </a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="cadastrarsalao.html">  CADASTRAR SALÃO </a></li>
-        <li><a href="servicos.html"> SERVIÇOS  </a></li>
-        <li><a href="contato.html">  CONTATO </a></li>
-        <li><a href="criarconta.html">  CRIAR CONTA </a></li>
-        <li><a href="loginglamour.html">  <i class="fa fa-user"></i> Login </a></li>
-      </ul>
-    </div>
-
-  
-  </div>
-</nav>
-
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+        <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
 
 
 
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+        <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
-<div class="" style="text-align:center;margin-top:100px;" >
-  
-  <h1> <i class="fa fa-user-plus"></i> Cadastar Salão </h1>
-  
-</div>
+        <div class="" style="margin-top:100px;" >
 
-<br>
+            <h1> <i class="fa fa--plus col-md-offset-5"></i> Cadastrar Salão </h1>
 
+        </div>
 
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-<div class="col-md-12" >
-
-<div class="col-md-8 col-md-offset-2">  <!-- PAINEL DE CADASTRO -->
+        <br>
 
 
-<form method="POST" action="cadastrarsalao.php" >
+        <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+        <div class="col-md-12 col-md-pull-1" >
 
-<div class="form-group col-md-3 has-success">
-    <label for="cnpj_cpf"> CNPJ </label>
-    <input type="text" class="form-control" name="cnpj_cpf" id="cnpj_cpf" size=14 maxlength=14 placeholder="Somente Números">
-  </div>
+            <div class="col-md-8 col-md-offset-3">  <!-- PAINEL DE CADASTRO -->
 
-  <div class="form-group col-md-9 has-success">
-    <label for="nome_salao"> Nome do Salão </label>
-    <input type="text" class="form-control" name="nome_salao" id="nome_salao" placeholder="">
-  </div>
 
-<div class="form-group col-md-8 has-success">
-    <label for="endereco"> Endereço </label>
-    <input type="text" class="form-control" name="endereco" id="endereco" placeholder="">
-  </div>
- 
+                <form method="POST" action="cadastrarsalao.php" >
 
-<div class="form-group col-md-4 has-success">
-    <label for="bairro"> Bairro </label>
-    <input type="text" class="form-control" name="bairro" id="bairro" placeholder="">
-  </div>
+                    <div class="form-group col-md-3 has-success">
+                        <label for="cnpj_cpf"> CNPJ </label>
+                        <input type="text" class="form-control" name="cnpj_cpf" id="cnpj_cpf" size=14 maxlength=14 placeholder="Somente Números">
+                    </div>
 
-  <div class="form-group col-md-4 has-success">
-    <label for="cidade"> Cidade </label>
-    <input type="text" class="form-control" name="cidade" id="cidade" placeholder="">
-  </div>
+                    <div class="form-group col-md-5 has-success">
+                        <label for="nome_salao"> Nome do Salão </label>
+                        <input type="text" class="form-control" name="nome_salao" id="nome_salao" placeholder="">
+                    </div>
 
-  <div class="form-group col-md-4 has-success">
-    <label for="cep"> CEP </label>
-    <input type="text" class="form-control" name="cep" id="cep" size=8 maxlength=8 placeholder="Somente Números">
-  </div>
- 
-  <div class="div-select form-group col-md-4 has-success    " >
-    <label for="uf"> Estado </label>
-    <br />
-    <select name="uf" >
-	<option value="">Selecione</option>
-	<option value="AC">AC</option>
-	<option value="AL">AL</option>
-	<option value="AM">AM</option>
-	<option value="AP">AP</option>
-	<option value="BA">BA</option>
-	<option value="CE">CE</option>
-	<option value="DF">DF</option>
-	<option value="ES">ES</option>
-	<option value="GO">GO</option>
-	<option value="MA">MA</option>
-	<option value="MG">MG</option>
-	<option value="MS">MS</option>
-	<option value="MT">MT</option>
-	<option value="PA">PA</option>
-	<option value="PB">PB</option>
-	<option value="PE">PE</option>
-	<option value="PI">PI</option>
-	<option value="PR">PR</option>
-	<option value="RJ">RJ</option>
-	<option value="RN">RN</option>
-	<option value="RS">RS</option>
-	<option value="RO">RO</option>
-	<option value="RR">RR</option>
-	<option value="SC">SC</option>
-	<option value="SE">SE</option>
-	<option value="SP">SP</option>
-	<option value="TO">TO</option>
- </select>
-  </div>
+                    <div class="form-group col-md-4 has-success">
+                        <label for="nome_salao"> Login </label>
+                        <input type="text" class="form-control" name="login_salao" id="login_salao" placeholder="">
+                    </div>
 
-  <div class="form-group col-md-6 has-success">
-    <label for="email_salao"> E-mail </label>
-    <input type="text" class="form-control" name="email_salao" id="email_salao" placeholder="">
-  </div>
-    
-  <div class="form-group col-md-6  has-success">
- 
-    <label for="senha_salao"> Senha </label>
-    <input type="password" class="form-control" name="senha_salao" id="senha_salao">
-  </div>
+
+                    <div class="div-select form-group col-md-3 has-success    " >
+                        <label for="uf"> Estado </label>
+                        <br />
+                        <select name="uf" >
+                            <option value="">Selecione</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-5 has-success ">
+                        <label for="cidade"> Cidade </label>
+                        <input type="text" class="form-control" name="cidade" id="cidade" placeholder="">
+                    </div>
 
 
 
+                    <div class="form-group col-md-4 has-success" >
+                        <label for="bairro"> Bairro </label>
+                        <input type="text" class="form-control" name="bairro" id="bairro" placeholder="">
+                    </div>
+              
+                    <div class="form-group col-md-3 has-success col-md-pull-3">
+                        <label for="cep"> CEP </label>
+                        <input type="text" class="form-control" name="cep" id="cep" size=8 maxlength=8 placeholder="Somente Números">
+                    </div>
+
+                    <div class="form-group col-md-9 has-success col-md-push-3" style="margin-top:-79px">
+                        <label for="endereco"> Endereço </label>
+                        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="">
+                    </div>
 
 
 
+                    <div class="form-group col-md-6 has-success ">
+                        <label for="email_salao"> E-mail </label>
+                        <input type="text" class="form-control" name="email_salao" id="email_salao" placeholder="">
+                    </div>
 
-<div class="col-md-10" style="margin-bottom:20px;">
+                    <div class="form-group col-md-6  has-success">
 
-  <button type="button" class="btn btn-danger"> Cancelar </button>
-  <input type="submit" value="Salvar" id="salvar" class="btn btn-success"> 
-</div>
+                        <label for="senha_salao"> Senha </label>
+                        <input type="password" class="form-control" name="senha_salao" id="senha_salao" size=16 maxlength=16>
+                    </div>
 
-</form>
-
-</div>
+                   
 
 
 
 
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-<div class="col-md-12" style="text-align:center;background-color: white;">
-  
-  <h2> Publicidade </h2>
+                    <div class="col-md-12" style="margin-bottom:20px; ">
 
-<img src="img/publicidade.jpg" width="200" height="160">
-<img src="img/publicidade.jpg" width="200" height="160">
-<img src="img/publicidade.jpg" width="200" height="160">
-<img src="img/publicidade.jpg" width="200" height="160">
+                        <button type="button" class="btn btn-danger"> Cancelar </button>
+                        <input type="submit" value="Salvar" id="salvar" class="btn btn-success"> 
+                        <a href="gerenciadorLogin.php" class="btn btn-info col-md-offset-8" > Login Salão </a>
 
-<hr id="sepador" class="col-md-12">
+                    </div>
+
+                </form>
+
+            </div>
+
+           
 
 
-</div>
+
+            <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
 
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
-<div class="col-md-12">
-<div class="alert alert-dismissible alert-success">
- <strong> Ajuda ?! </strong> Entre em contato conosco <a href="#" class="alert-link"> glamourhost@gmail.com </a>.
-</div>
-</div>
 
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-<div class="col-md-12 footer" style="text-align:center;">
-   <p> ©2016 - GlamourHost.
-   <p>Desenvolvido por Equipe Glamour
-  </div>
+            <div class="col-md-12" style="left:20%">
+                <div class="alert alert-dismissible alert-success">
+                    <strong> Ajuda ?! </strong> Entre em contato conosco <a href="#" class="alert-link"> glamourhost@gmail.com </a>.
+                </div>
 
-</body>
+
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <div class="col-md-12 footer" style="text-align:center;">
+                    <p> ©2016 - GlamourHost.
+                    <p>Desenvolvido por Equipe Glamour
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>
