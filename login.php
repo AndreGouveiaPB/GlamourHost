@@ -16,7 +16,7 @@ $email = $_POST['email'];
 
 if (isset($entrar)) {
 
-    $verifica = mysql_query ("SELECT * FROM cliente WHERE email ='$email' and senha='$senha'") or die("erro ao selecionar");
+    $verifica = mysql_query ("SELECT * FROM cliente WHERE email ='$email' and senha='$senha'") or die("Erro ao selecionar");
 
 
     if (mysql_num_rows($verifica) <= 0) {
@@ -28,6 +28,7 @@ if (isset($entrar)) {
         $_SESSION['usuarioid'] = $dados['idCliente'];
         $_SESSION['usuarionome'] = $dados['nome_cliente'];
         setcookie("email", $email);
+        
     }
 }
 ?>
