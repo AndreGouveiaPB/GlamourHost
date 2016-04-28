@@ -1,0 +1,44 @@
+body {
+    background: url("../img/nuvem.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+header { background: rgba(255,255,255,0.5);}
+section {background: rgba(255,255,255,0.6);min-height: 380px!important;}
+footer p {text-align: center; margin: 0;}
+
+.spbot {padding-bottom: 0!important;}
+#corpopagina {}
+#pagina {margin-top: 20px!important;}
+#dentes {padding-top: 20px;}
+#dentes > div {border: 1px solid #CFDBEB;}
+
+/*elementos das paginas*/
+#alertahome {}
+table {border: 1px solid /*#C0C0C0*/#CFDBEB;}
+table a {color: #375a7f; text-decoration: none!important;}
+/*#myTabContent {color: whitesmoke;}*/
+/*###############################################################*/
+.center {float:none; margin: 0 auto!important;text-align: center;}
+.textesquerda {text-align: left;}
+.textocentro {text-align: center;}
+.sempadding {padding: 0;}
+.direitadaform {margin-right: 10px!important;}
+.atual {z-index: 2!important; color: #ffffff!important; background-color: #0f7864!important; border-color: transparent!important;cursor: default!important;}
+.col-centered{float: none;margin: 0 auto;}
+
+
+
+.cor1 {background: #F0F0F0;}    /*CINZA TOPO*/
+.cor2 {background: #FBFBFB;}    /*CINZA CLARO*/
+.cor3 {background: #EBF3FD; border-top: 1px solid #CFDBEB; border-bottom: 1px solid #CFDBEB;}    /*W7 CLARO*/
+.cor4 {background: #F9FBFD;}    /*W7 ESCURO*/
+.cor5 {background: #CFDBEB;}    /*TIRULO TABELAS*/
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}

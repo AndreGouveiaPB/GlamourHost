@@ -22,6 +22,26 @@ include ("config.php");
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+
+  
+  <script src="js/jquery.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+       
+        
+        
+        <script>
+
+   	$(function(){
+
+      $('.datepicker').datepicker();
+              
+    	 
+      });
+
+
+   </script>
+
 
   
 </head>
@@ -97,9 +117,10 @@ include ("config.php");
 
 
 
-<div class="form-group has-success col-md-3">
+<div class="has-success col-md-3">
+    
   <label class="control-label" for=""> * Data  </label>
-  <input type="text" class="form-control" placeholder="DD/MM/AAAA" name="Data">
+  <input type="text" class="form-control datepicker" name="Data" data-date-format="dd/mm/yyyy">
   
 </div>
 
