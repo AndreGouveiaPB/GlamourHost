@@ -12,7 +12,7 @@ include ("config.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head
  
   <title> GlamourHost </title>
   <link rel="icon"  type="image/jpg" href="img\logo.jpg" />
@@ -81,6 +81,11 @@ include ("config.php");
   <h1> <i class="fa fa-calendar"></i> Agendamento </h1>
   
 </div>
+
+
+
+
+
 
 <br>
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
