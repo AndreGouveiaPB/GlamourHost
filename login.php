@@ -1,5 +1,10 @@
-﻿<?php
-header("content-type: text/html; charset=utf-8");
+<?php
+/*
+mb_internal_encoding("UTF-8"); 
+mb_http_output( "UTF-8" );  
+ob_start("mb_output_handler");   
+header("Content-Type: text/html; charset=UTF-8",true);
+*/
 
 session_start();
 
@@ -8,6 +13,7 @@ include("config.php");
 $email = $_POST['email'];
 @$entrar = $_POST['entrar'];
 @$senha = md5(mysql_real_escape_string(($_POST['senha'])));
+
 if (isset($entrar)) {
 
     $verifica = mysql_query ("SELECT * FROM cliente WHERE email ='$email' and senha='$senha'") or die("erro ao selecionar");
@@ -30,11 +36,10 @@ if (isset($entrar)) {
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta charset="utf-8" />
         <title> GlamourHost </title>
         <link rel="icon"  type="image/jpg" href="img\logo.jpg" />
 
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -67,7 +72,7 @@ if (isset($entrar)) {
                         <li><a href="contato.php">  CONTATO </a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="usuario.php">  <i class="fa fa-user-md"></i>  <?=$_SESSION['usuarionome']?></a></li>
+                            <li><a href="usuario.php">  <i class="fa fa-user"></i>  <?=$_SESSION['usuarionome']?></a></li>
                         <li><a href="logoff.php"> <i class="fa fa-sign-out"></i> Sair</a>
                             </ul>
                                     
@@ -166,7 +171,7 @@ if (isset($entrar)) {
                                                         </p>
 
 
-                                                        <br> <a href="agendamento.php" class="btn btn-primary"> Agendar </a>
+                                                        <br> <a href="agenda.php" class="btn btn-primary"> Agendar </a>
                                                     </div>
                                                     <div class="col-sm-4">
                                                         <img class="img img-responsive" style="display:inline;" src="img\Salao3.jpg" width="250" height="200">

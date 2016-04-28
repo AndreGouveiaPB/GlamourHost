@@ -174,7 +174,7 @@
         <li><a href="criarconta.html">  CRIAR CONTA </a></li>
       </ul>
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="loginglamour.html">  <i class="fa fa-user"></i> Login </a></li>
+        <li><a href="loginglamour.php">  <i class="fa fa-user"></i> Login </a></li>
       </ul>
     </div>
 
