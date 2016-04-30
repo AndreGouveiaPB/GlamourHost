@@ -89,7 +89,7 @@ include ("config.php");
 
 <br>
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-<form method="POST"  action="recebedados.php">
+<form method="POST"  action="salvaAgendamento.php">
 
 <div class="col-md-6"> <!--DIV PRINCIPAL -->
   
@@ -109,7 +109,7 @@ include ("config.php");
 
   <label class="control-label" for="funcionario"> * Selecione seu Profissonal </label>
 
-  <select class="form-control" id="select" name="Funcionario">
+  <select class="form-control" id="select" name="funcionario">
 
           <option value="Funcionário1"> Funcionário 01 </option>
           <option value="Funcionário2"> Funcionário 02 </option>
@@ -124,18 +124,19 @@ include ("config.php");
 
 <div class="has-success col-md-3">
     
-  <label class="control-label" for=""> * Data  </label>
-  <input type="text" class="form-control datepicker" name="Data" data-date-format="dd/mm/yyyy">
+  <label class="control-label" for="dtAgendamento"> * Data  </label>
+  <input type="text" class="form-control datepicker" name="dtAgendamento"data-date-format="dd/mm/yyyy">
   
 </div>
 
 
 
 
-
+<form method="POST" action="salvaAgendamento.php">
+    
 <div class="form-group has-success col-md-3">
-  <label class="control-label" for=""> * Periodo  </label>
-  <select class="form-control" name="Periodo">
+  <label class="control-label" for="periodo"> * Periodo  </label>
+  <select class="form-control" name="periodo">
                      <option value="Manhã"> Manhã </option>
                      <option value="Tarde"> Tarde </option>
                      <option value="Noite"> Noite </option>
@@ -147,16 +148,16 @@ include ("config.php");
 <div class="form-group  has-success col-md-6">
 
   <label class="control-label" for=""> * Hora  </label>
-  <select class="form-control" name="Horário">
-                     <option value=""> 8:00 am</option>
-                     <option value=""> 8:30 am</option>
-                     <option value=""> 9:00 am</option>
-                     <option value=""> 9:30 am</option>
-                     <option value=""> 10:00 am</option>
-                     <option value=""> 10:30 am</option>
-                     <option value=""> 11:00 am</option>
-                     <option value=""> 11:30 am</option>
-                     <option value=""> 12:00 am</option>
+  <select class="form-control" name="horario">
+                     <option value="8:00"> 8:00 </option>
+                     <option value=8:30""> 8:30 </option>
+                     <option value="9:00"> 9:00 </option>
+                     <option value="9:30"> 9:30 </option>
+                     <option value="10:00"> 10:00 </option>
+                     <option value="10:30"> 10:30 </option>
+                     <option value="11:00"> 11:00 </option>
+                     <option value="11:30"> 11:30 </option>
+                     <option value="12:00"> 12:00 </option>
                      <optgroup> 
                      <option> Tarde </option>
                      </optgroup>
@@ -172,7 +173,7 @@ include ("config.php");
 
   <label class="control-label" for="inputSuccess"> * Serviços </label>
 
-  <select class="form-control" id="" name="Serviços">
+  <select class="form-control" id="" name="servico">
 
           <option value="corte"> Corte </option>
           <option value="luzes"> Luzes </option>
@@ -196,7 +197,7 @@ include ("config.php");
       <label for="textArea" class="col-lg-2 control-label"> Observações </label>
       <div class="col-md-12">
 
-        <textarea class="form-control" rows="3" id="textArea" name="Observações"></textarea>
+        <textarea class="form-control" rows="3" id="textArea" name="obs"></textarea>
         <span class="help-block">(*) Campo Obrigatório.</span>
       </div>
     </div>
