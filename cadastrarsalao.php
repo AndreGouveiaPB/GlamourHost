@@ -130,7 +130,7 @@
 
                         <button type="button" class="btn btn-danger"> Cancelar </button>
                         <input type="submit" value="Salvar" id="salvar" class="btn btn-success"> 
-                        <a href="gerenciadorLogin.php" class="btn btn-info col-md-offset-7" > Login Salão </a>
+                        <a href="gerenciador/gerenciadorLogin.php" class="btn btn-info col-md-offset-7" > Login Salão </a>
 
                     </div>
 

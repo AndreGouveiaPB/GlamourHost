@@ -1,11 +1,10 @@
 <?php
-$raiz = "../";
+
 header("content-type: text/html; charset=utf-8");
 
 session_start();
 
-include ($raiz."Include/config.php");
-//include("config.php");
+include("config.php");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -14,12 +13,12 @@ include ($raiz."Include/config.php");
         <meta charset="utf-8" />
         <title></title></title>
 
-    <link href="<?=$raiz?>css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="<?=$raiz?>css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="<?=$raiz?>css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
 
-    <script src="<?=$raiz?>js/jquery-2.2.2.js"></script>
-    <script src="<?=$raiz?>js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.2.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -46,7 +45,7 @@ include ($raiz."Include/config.php");
                 </h1>
 
             </div>
-            <?php include ($raiz."Include/menusuper.php");?>
+            <?php include ("menusuper.php"); ?>
             <div class="panel-body">
                 <!--TOPO DA PAGINA USUARIOS-->
                 <div class="col-md-12">

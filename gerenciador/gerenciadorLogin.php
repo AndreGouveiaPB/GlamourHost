@@ -1,9 +1,11 @@
 <?php
 header("content-type: text/html; charset=utf-8");
 
+$raiz = "../";
+
 session_start();
 
-include("config.php");
+include("Include/config.php");
 
 $login_salao = $_POST['login_salao'];
 @$entrar = $_POST['entrar'];
@@ -100,7 +102,7 @@ if (isset($entrar)) {
 
                         <div class="well" style="margin-top:50px">
                             <h2 class="text-center"> </h2>
-                            <img src="img/logoglamour.jpg" class="img img-responsive"  />
+                            <img src="<?=$raiz?>img/logoglamour.jpg" class="img img-responsive"  />
                         </div>
 
 
@@ -117,14 +119,14 @@ if (isset($entrar)) {
 
 
                             <div class="col-md-10 well form-group sombra redondo" style="margin: 0 auto; float: none; padding-bottom: 20px;">
-                                <img src="img/logo.jpg" class="img img-responsive" width="125" />
+                                <img src="<?=$raiz?>img/logo.jpg" class="img img-responsive" width="125" />
                                 <form id="frmlogin" method="post" action="gerenciador.php" class="col-lg-11" style="float: none; margin: 0 auto;">
                                     <input type="text" name="login_salao" id="login_salao" title="Digite o nome do usuário: (login)." class="form-control" placeholder="Seu login aqui." style="margin-top: 20px; margin-bottom: 20px;">
                                     <input type="password" name="senha_salao" id="senha_salao" title="Digite a senha do usuário." class="form-control" placeholder="Sua senha aqui.">
                                     <br>
                                     <input type="text" name="captcha" class="form-control" title="Digite o código ao lado." placeholder="Insira o código" style="width: 47%; margin-right: 2%; float: left;"> 
 
-                                    <img src="funcao/captcha.php" style="float: left; max-width: 30%; padding: 0px; " class="form-control btn btn-default">
+                                    <img src="<?=$raiz?>funcao/captcha.php" style="float: left; max-width: 30%; padding: 0px; " class="form-control btn btn-default">
                                     <br /><br /><br />
 
 
@@ -149,7 +151,7 @@ if (isset($entrar)) {
 
 
             <div class="panel-footer"> 
-                <p class="text-center">&copy;<a href="index.html"> GlamourHost </a> </p> 
+                <p class="text-center">&copy;<a href="<?=$raiz?>/index.php"> GlamourHost </a> </p> 
             </div>
 
         </div>

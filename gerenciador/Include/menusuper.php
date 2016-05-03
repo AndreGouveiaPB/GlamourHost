@@ -4,12 +4,12 @@
         <meta charset="utf-8" />
         <title></title></title>
 
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="<?=$raiz?>css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="<?=$raiz?>css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="<?=$raiz?>css/animate.css" rel="stylesheet" type="text/css" />
 
-    <script src="js/jquery-2.2.2.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="<?=$raiz?>js/jquery-2.2.2.js"></script>
+    <script src="<?=$raiz?>js/bootstrap.min.js"></script>
 
 
 
@@ -24,7 +24,7 @@
       </button>
 
 
-      <a class="navbar-brand" href="gerenciador.php">GlamourHost</a>
+      <a class="navbar-brand" href="<?=$raiz?>gerenciador.php">GlamourHost</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -34,12 +34,12 @@
               
 
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <!--form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Procurar">
         </div>
         <button type="submit" class="btn btn-default">Ok</button>
-      </form>
+      </form-->
 
 
  <!-- USUARIO LOGADO E LOGOFF -->

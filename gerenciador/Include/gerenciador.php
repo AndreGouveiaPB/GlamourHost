@@ -1,9 +1,11 @@
 ﻿<?php
+
+$raiz = "../";
 header("content-type: text/html; charset=utf-8");
 
 session_start();
 
-include("config.php");
+include ($raiz."Include/config.php");
 
 $login_salao = $_POST['login_salao'];
 $entrar = $_POST['entrar'];

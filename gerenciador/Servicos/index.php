@@ -4,8 +4,7 @@ header("content-type: text/html; charset=utf-8");
 
 session_start();
 
-include ($raiz."Include/config.php");
-//include("config.php");
+include("config.php");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -14,12 +13,12 @@ include ($raiz."Include/config.php");
         <meta charset="utf-8" />
         <title></title></title>
 
-    <link href="<?=$raiz?>css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="<?=$raiz?>css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="<?=$raiz?>css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
 
-    <script src="<?=$raiz?>js/jquery-2.2.2.js"></script>
-    <script src="<?=$raiz?>js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.2.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -42,7 +41,7 @@ include ($raiz."Include/config.php");
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h1 class="panel-title text-center">
-                    <strong> Funcionários</strong>
+                    <strong> Serviços</strong>
                 </h1>
 
             </div>
@@ -95,7 +94,7 @@ include ($raiz."Include/config.php");
 
                             <tr>
                                 <td class="text-center">28 </td>
-                                <td><a href="cadastro.php?id=28">Funcionário 01</a></td>
+                                <td><a href="cadastro.php?id=28">Serviço 01</a></td>
                                 <td class="text-center"><a href="#"><i class="fa fa-recycle"></i></a></td>
                                 <td class="text-center"><a href="#"><i class="fa fa-edit"></i></a></td>
                                 <td class="text-center"><a href="#"><i class="fa fa-trash"></i></a></td>
