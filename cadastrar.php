@@ -16,32 +16,7 @@
 
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i>  Inicio </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a href="cadastrarsalao.html">  CADASTRAR SALÃO </a></li>
-                        <li><a href="servicos.html"> SERVIÇOS  </a></li>
-                        <li><a href="contato.html">  CONTATO </a></li>
-                        <li><a href="criarconta.html">  CRIAR CONTA </a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="loginglamour.php">  <i class="fa fa-user"></i> Login </a></li>
-                    </ul>
-                </div>
-
-
-            </div>
-        </nav>
+        <?php include ("includes/menunaologado.php")?>
 
         <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
@@ -144,18 +119,11 @@
 
             <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
-            <div class="col-md-12">
-                <div class="alert alert-dismissible alert-success">
-                    <strong> Ajuda ?! </strong> Entre em contato conosco <a href="#" class="alert-link"> glamourhost@gmail.com </a>.
-                </div>
-            </div>
-
-            <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-            <div class="col-md-12 footer" style="text-align:center;">
-                <p> ©2016 - GlamourHost.
-                <p>Desenvolvido por Equipe Glamour 
-            </div>
+            
         </div>
+        <?php include ("includes/footer.php");?>
     </body>
 </html>
+
+
 

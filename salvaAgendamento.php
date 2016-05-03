@@ -36,4 +36,4 @@ $usuario = $_SESSION['usuarionome'];
             	
             	mysql_query($comando);
             
-            echo $comando;
+           

@@ -1922,15 +1922,15 @@
 			}
 
 		.icon.style1 {
-			color: #00ffcc;
+			color: #9400D3;
 		}
 
 		.icon.style2 {
-			color: #00f0ff;
+			color: #9400D3;
 		}
 
 		.icon.style3 {
-			color: #76ddff;
+			color: #9400D3;
 		}
 
 /* Image */
@@ -2650,7 +2650,7 @@
 			}
 
 			.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
-				color: #ffffff;
+				color: #9400D3;
 			}
 
 			.wrapper.style1 hr {

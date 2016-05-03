@@ -1,13 +1,4 @@
-<?php
-mb_internal_encoding("UTF-8"); 
-mb_http_output( "UTF-8" );  
-ob_start("mb_output_handler");   
-header("Content-Type: text/html; charset=UTF-8",true);
-
-session_start();
-include "config.php";
-?>
-
+<?php ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,8 +16,9 @@ include "config.php";
 
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-       <?php include ("includes/menusuper.php") ?>
-      
+
+        <?php include ("includes/menunaologado.php") ?>
+
 
         <div class="" style="text-align:center;margin-top:90px;">
 
@@ -84,8 +76,9 @@ include "config.php";
 
 
 
-
-    <?php include ("includes/footer.php") ?>
-
+</div>
+<?php include ("includes/footer.php"); ?>
 </body>
 </html>
+
+

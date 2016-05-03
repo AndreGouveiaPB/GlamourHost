@@ -16,6 +16,28 @@
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     </head>
     <body class="landing">
+        <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '151230725273240',
+                    xfbml: true,
+                    version: 'v2.6'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+           
+        </script>  
+        
 
         <!-- Page Wrapper -->
         <div id="page-wrapper">
@@ -26,20 +48,30 @@
                 <nav id="nav">
                     <ul>
                         <li class="special">
-                            <a href="cadastrarsalao.html"><i class="fa fa-lock"></i><span>Tenho Salão</span></a>
+                            <a href="cadastrarsalao.php"><i class="fa fa-lock"></i><span>Tenho Salão</span></a>
 
                         </li>
                         <li class="special">
                             <a href="#menu" class="menuToggle"><span>Menu</span></a>
                             <div id="menu">
                                 <ul>
-                                    <li><a href="home.php">Home</a></li>
-                                    <li><a  href="cadastrarsalao.html">Tenho Salão</a></li>
-                                    <li><a href="servicos.html">Serviços</a></li>
-                                    <li><a  href="contato.html">Contato</a></li>
-                                    <li><a href="criarconta.html">Criar Conta</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li><a  href="cadastrarsalao.php">Tenho Salão</a></li>
+                                    <li><a href="servicos.php">Serviços</a></li>
+                                    <li><a  href="contatooff.php">Contato</a></li>
+                                    <li><a href="cadastrar.php">Cadastrar</a></li>
                                     <li><a href="loginglamour.php">Login</a></li>
                                 </ul>
+                                <div id="fb-root"></div>
+                                <?php include ("loginface.html");?>
+                                <div
+                                    class="fb-like"
+                                    data-share="true"
+                                    data-width="450"
+                                    data-show-faces="true">
+                                </div>
+                            </div>
+
                             </div>
 
                     </ul>
@@ -51,15 +83,15 @@
                 <div class="inner">
                     <h2>GlamourHost</h2>
                     <p>Agendamento online em Salões de Beleza</p>
-                    <h6><p>Pesquise aqui o Serviço ou Salão</p></h6>
                     <div>
                         <form class="form-inline" id="busca">
-                            <input type="text" class="form-control" style="width: 40%; margin-left:30%;                                 
-                                height: 50px; "size="10" placeholder="Procurar" required><br />
-                            <a href="loginglamour.php" class="button fa fa-search"></a>
+                            <input type="text" class="form-control" style="width: 40%; margin-left:30%;
+                                   text-align: center; display: block; height: 50px; "size="50" 
+                                   placeholder="Pesquise aqui o Serviço ou Salão" required><br />
+                            <a href="servicos.html" class="button fa fa-search"></a>
                         </form>                
                     </div>  
-                    
+
                 </div>
                 <a href="#one" class="more scrolly">Continuar</a>
             </section>

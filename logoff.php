@@ -6,5 +6,5 @@ session_destroy();
 
 session_unset();
 
-echo "<script>alert('Você saiu!');top.location.href='index.html';</script>";
+echo "<script>alert('Você saiu!');top.location.href='index.php';</script>";
 
