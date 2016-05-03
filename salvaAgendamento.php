@@ -34,6 +34,7 @@ $usuario = $_SESSION['usuarionome'];
             	$comando .= $campos;
             	$comando.= " VALUES ".$valores;
             	
-            	mysql_query($comando);
+            	mysql_query($comando, $con);
+                header('Location: agendamento.php');
             
            
